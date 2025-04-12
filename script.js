@@ -107,6 +107,17 @@ function executarComando(params) {
   
     document.getElementById("caixa" + contador).innerHTML += 'Skipped';
     document.getElementById('img' + contador).src = 'imagens/barra.png';
+
+    const icone = document.getElementById("icone");
+  
+    if (icone.src.includes("imagens/botao-play.png")) {
+        icone.src = "imagens/pausa.png"; // Troca para a segunda imagem
+    } else {
+        icone.src = "imagens/botao-play.png"; // Troca de volta para a primeira imagem
+    }
+    audio2.onended = function() {
+      icone.src = "imagens/botao-play.png";
+    }
   
   });
   
@@ -160,6 +171,16 @@ function executarComando(params) {
     document.getElementById('img' + contador).src = 'imagens/barra.png';
   
   
+    const icone = document.getElementById("icone");
+  
+    if (icone.src.includes("imagens/botao-play.png")) {
+        icone.src = "imagens/pausa.png"; // Troca para a segunda imagem
+    } else {
+        icone.src = "imagens/botao-play.png"; // Troca de volta para a primeira imagem
+    }
+    audio3.onended = function() {
+      icone.src = "imagens/botao-play.png";
+    }
   });
   
   
@@ -211,7 +232,16 @@ function executarComando(params) {
     document.getElementById("caixa" + contador).innerHTML += 'Skipped';
     document.getElementById('img' + contador).src = 'imagens/barra.png';
   
+    const icone = document.getElementById("icone");
   
+    if (icone.src.includes("imagens/botao-play.png")) {
+        icone.src = "imagens/pausa.png"; // Troca para a segunda imagem
+    } else {
+        icone.src = "imagens/botao-play.png"; // Troca de volta para a primeira imagem
+    }
+    audio4.onended = function() {
+      icone.src = "imagens/botao-play.png";
+    }
   });
   
   
@@ -406,14 +436,14 @@ const opcoes = [
         txt_result.textContent = 'EPIC Fã' 
         txt_result.style.color = '#818650'
         txt_result.style.position = 'absolute';
-        txt_result.style.left =  '272px';
+        txt_result.style.left =  '275px';
       }
       if (document.getElementById("q3").style.backgroundColor ===  'green'){
         const txt_result = document.getElementById('txt-result')
         txt_result.textContent = 'Fã médio' 
         txt_result.style.color = '#D5CEA6'
         txt_result.style.position = 'absolute';
-        txt_result.style.left =  '290px';
+        txt_result.style.left =  '270px';
       }
       if (document.getElementById("q4").style.backgroundColor ===  'green'){
         const txt_result = document.getElementById('txt-result')
@@ -481,4 +511,13 @@ const opcoes = [
   
   }
   
-  
+  function mostrarTexto(params) {
+    if (document.getElementById('txt-D').style.display === 'none'){
+      document.getElementById('txt-D').style.display = 'block';
+      document.getElementById('disc').textContent = 'v Disclaimer v'
+    } else {
+      document.getElementById('txt-D').style.display = 'none';
+      document.getElementById('disc').textContent = '< Disclaimer >'
+    }
+  }
+

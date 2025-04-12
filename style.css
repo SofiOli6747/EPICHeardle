@@ -29,6 +29,25 @@ body{
 }
 
 
+.disclaimer{
+    cursor: pointer;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #b04b11;
+    position: absolute;
+    top: 650px;
+}
+.disclaimer:hover{
+    color: #b3683c;
+}
+
+.txt-disclaimer{
+    position: absolute;
+    top: 670px;
+    display: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
 
 
 .caixas{
